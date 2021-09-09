@@ -63,7 +63,7 @@ DEMO：[https://lixingyong.com/](https://lixingyong.com/)
 - [ ] 归档重写
 - [ ] 集成视频播放插件
 
-## ⭐️ 安装主题
+## ⭐️ 安装主题 
 
 ### 本地安装
 1. 点击[下载](https://github.com/LIlGG/halo-theme-sakura/archive/master.zip)
