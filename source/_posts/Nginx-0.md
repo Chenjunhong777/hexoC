@@ -459,7 +459,7 @@ location / {
 }
 ```
 
-![请求转发](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![请求转发](http://123.57.9.108/2020/05/16/Nginx-0/ng15.png)
 
  *    测试
 
@@ -472,7 +472,7 @@ $ ./nginx
 
 * 效果
 
-![反向代理效果](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![反向代理效果](http://123.57.9.108/2020/05/16/Nginx-0/ng16.png)
 
 ## [](#Nginx配置实例-反向代理-2 "Nginx配置实例-反向代理(2)")Nginx配置实例-反向代理\(2\)
 
@@ -554,11 +554,11 @@ $ ./nginx -s stop
 $ ./nginx
 ```
 
-![修改的文件](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![修改的文件](http://123.57.9.108/2020/05/16/Nginx-0/ng17.png)
 
 ### [](#测试 "测试")测试
 
-![完整效果](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![完整效果](http://123.57.9.108/2020/05/16/Nginx-0/ng18.png)
 
 ### [](#location的匹配符 "location的匹配符")location的匹配符
 
@@ -606,7 +606,7 @@ $ vim nginx.conf
         }
 ```
 
-![设置图](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![设置图](http://123.57.9.108/2020/05/16/Nginx-0/ng19.png)
 
 ### [](#效果 "效果")效果
 
@@ -619,7 +619,7 @@ $ ./nginx -s stop
 $ ./nginx
 ```
 
-![效果图](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![效果图](http://123.57.9.108/2020/05/16/Nginx-0/ng20.png)
 
 > nginx会将请求分发到不同的服务器中，来达到服务器的压力均衡
 
@@ -681,7 +681,7 @@ $ ./nginx
 > > * 第一种：是纯粹把静态文件独立成单独的域名，放在独立的服务器上，也是目前主流推崇的方案；
 > > * 第二种：方法就是动态跟静态文件混合在一起发布，通过nginx来分开。
 
-![动静分离](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![动静分离](http://123.57.9.108/2020/05/16/Nginx-0/ng21.png)
 
 > 通过 `location`指定不同的后缀名实现不同的请求转发。通过 `expires`参数设置，可以使浏 览器缓存过期时间，减少与服务器之前的请求和流量。具体 `Expires`定义：是给一个资源 设定一个过期时间，也就是说无需去服务端验证，直接通过浏览器自身确认是否过期即可， 所以不会产生额外的流量。此种方法非常适合不经常变动的资源。（如果经常更新的文件， 不建议使用 Expires 来缓存），我这里设置`3d`，表示在这 3 天之内访问这个`URL`，发送一 个请求，比对服务器该文件最后更新时间没有变化，则不会从服务器抓取，返回状态码`304`， 如果有修改，则直接从服务器重新下载，返回状态码 `200`。
 
@@ -741,7 +741,7 @@ $ ./nginx -s stop
 $ ./nginx
 ```
 
-![image-20200613220126822](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![image-20200613220126822](http://123.57.9.108/2020/05/16/Nginx-0/ng22.png)
 
 > 动静分离:
 > 
@@ -755,7 +755,7 @@ http://39.108.96.122/image/logo.png # 访问image文件
 http://39.108.96.122/www/a.html # 访问html文件
 ```
 
-![测试效果](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![测试效果](http://123.57.9.108/2020/05/16/Nginx-0/ng23.png)
 
 > `autoindex on;`可以列出文件目录
 
@@ -765,11 +765,11 @@ http://39.108.96.122/www/a.html # 访问html文件
 
 > Nginx可能会宕机导致无法用户无法访问到服务器资源
 
-![问题](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![问题](http://123.57.9.108/2020/05/16/Nginx-0/ng24.png)
 
 ### [](#解决方案-高可用主从配置 "解决方案(高可用主从配置)")解决方案\(高可用主从配置\)
 
-![主从配置](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![主从配置](http://123.57.9.108/2020/05/16/Nginx-0/ng25.png)
 
 > 如果主服务器`nginx`挂掉了,那么需要保证系统依然可以正常运行,这就是高可用,需要配置`keepalived`在`主从服务器中进行判断nginx的状态,如果正常运行就不切换`nginx`服务器,如果宕机,就切换`备份`nginx`服务器,并且对外提供一个不存在的`虚拟IP`
 
@@ -1093,11 +1093,11 @@ fi
 
 ### [](#Master工作方式 "Master工作方式")Master工作方式
 
-![master工作方式](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![master工作方式](http://123.57.9.108/2020/05/16/Nginx-0/ng26png)
 
 ### [](#Worker工作方式 "Worker工作方式")Worker工作方式
 
-![worker工作方式](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![worker工作方式](http://123.57.9.108/2020/05/16/Nginx-0/ng27.png)
 
 > 一个`master` 和多个`woker`有那些好处
 > 
@@ -1175,11 +1175,11 @@ $ yum remove nginx
 
 * 解压缩以后配置环境变量
 
-![系统变量](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![系统变量](http://123.57.9.108/2020/05/16/Nginx-0/ng28.png)
 
 * `PATH` 引入 `NGINX_HOME`
 
-![path](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![path](http://123.57.9.108/2020/05/16/Nginx-0/ng29.png)
 
 * 启动Nginx
 
@@ -1195,11 +1195,11 @@ start nginx
 
 * 任务管理器查看是否有 `nginx` 进程
 
-![image-20201203165952134](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![image-20201203165952134](http://123.57.9.108/2020/05/16/Nginx-0/ng30.png)
 
 * 打开浏览器，输入`localhost:80`
 
-![image-20201203170047120](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![image-20201203170047120](http://123.57.9.108/2020/05/16/Nginx-0/ng31.png)
 
 > 安装成功
 
@@ -1243,7 +1243,7 @@ start nginx
 
 * 当前目录下已管理员身份运行命令行，添加到服务中，并启动服务
 
-![服务](https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg)
+![服务](http://123.57.9.108/2020/05/16/Nginx-0/ng32.png)
 
  *    常用指令
 
