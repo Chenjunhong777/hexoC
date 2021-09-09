@@ -5,7 +5,7 @@ banner_img:  /img/1.jpg
 tags:  "资料"
 date:  2020-03-16 14:21:07
 ---
-## Java数据类型和MySql数据类型对应表，备不时之需。  
+## Java数据类型和MySql数据类型对应表，备不时之需。   
 - Java数据类型和MySql数据类型对应表
   
 | 类型名称 | 显示长度 | 数据库类型 | JAVA类型 | JDBC类型索引(int)	| 描述 |
