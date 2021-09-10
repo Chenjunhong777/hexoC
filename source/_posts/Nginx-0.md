@@ -1,8 +1,9 @@
 ---
 title:  Nginx
 index_img:  /img/4.jpg
-banner_img:  /img/5.jpg
-tags:  "笔记"
+banner_img:  /img/4.jpg
+categories: 服务器
+tags:  [转载,资料]
 date:  2020-05-16 15:21:07
 ---
 ## [](#Nginx基本概念 "Nginx基本概念")Nginx基本概念
@@ -1259,3 +1260,6 @@ $ net stop nginx
 ```
 
 * * *
+转载
+文章作者: 墨白
+文章链接: https://www.mobaijun.com/posts/1706463495.html

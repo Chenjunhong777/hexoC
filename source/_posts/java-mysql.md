@@ -1,8 +1,9 @@
 ---
 title:  Java数据类型和MySql数据类型对应表
 index_img:  /img/3.jpg
-banner_img:  /img/1.jpg
-tags:  "资料"
+banner_img:  /img/3.jpg
+categories: java
+tags:  [资料,转载]
 date:  2020-03-16 14:21:07
 ---
 ## Java数据类型和MySql数据类型对应表，备不时之需。   
