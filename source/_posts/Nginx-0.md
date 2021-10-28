@@ -2,7 +2,7 @@
 title:  Nginx
 index_img:  /img/4.jpg
 banner_img:  /img/4.jpg
-categories: 服务器
+categories: linux
 tags:  [转载,资料]
 date:  2020-05-16 15:21:07
 ---
